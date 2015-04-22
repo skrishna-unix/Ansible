@@ -1,0 +1,19 @@
+---
+- hosts: Edge
+  user: kk479k
+  tasks:
+    - name: INstall httpd package
+      yum: name=httpd state=present
+      sudo: yes
+
+    - name: STart httpd service
+      service: name=httpd state=started
+      sudo: yes
+- hosts: datanodes
+  user: kk479k
+  tasks:
+    - name: Install vsftpd
+      yum: name=vsftpd state=latest
+      sudo: yes
+    - name: debig how to use it
+      debug: msg={{ ansible_os_family  }}

@@ -1,0 +1,14 @@
+ userdel -r kk479k
+  groupadd -g  10073 kk479k
+  useradd -g 10073 -u 10073 -d /home/kk479k -c Krishna_Kilari kk479k
+  mkdir /home/kk479k/.ssh
+  chmod -R 700 /home/kk479k/.ssh
+  chown -R 10073:10073 /home/kk479k/.ssh
+  touch /home/kk479k/.ssh/authorized_keys
+  chmod 600  /home/kk479k/.ssh/authorized_keys
+  chown 10073:10073  /home/kk479k/.ssh/authorized_keys
+ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJakmU+wCp4f6YE9hG34Xy7zxY1UGU7msmLCB6XBW+nbFI+fHoZ24nrlgSsl8Pd+W6E9dwSd/eLHr6NzEVF/ztfQSQbg2inXmUltMTk2t9C+mvKC8uVUcqU8ChMiyxIZSjrnr45Ff4jd/QMX81nTJ9otDt6wVsB25zSuyi7u1vxHQa06hTWOsQaNf5YJRrPFRG6T9Jtv1jnw+4SOTJJ1A08GnLN/o0PusM4XuKDOyx6ls4mnAosB3qrxtemuYjmqJBQpVdgst2L2k3TFyPffsbXUc6hduMOE4zNWjbfJlM4VcWDy7+CT7FTuIDeWWFpDJTOpRNYLnKCRyakkjClMkr kk479k@nothing.attdns.com" > /home/kk479k/.ssh/authorized_keys
+
+
+
+echo "kk479k ALL=(ALL)  NOPASSWD: ALL" > /etc/sudoers.d/kk479k

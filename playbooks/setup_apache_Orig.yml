@@ -1,0 +1,17 @@
+---
+- hosts: Edge
+  user: kk479k
+  tasks:
+    - name: INstall httpd package
+      yum: name=httpd state=absent
+      sudo: yes
+
+    - name: STart httpd service
+      service: name=httpd state=started
+      sudo: yes
+- hosts: datanodes
+  user: kk479k
+  tasks:
+    - name: Install vsftpd
+      yum: name=vsftpd state=absent
+      sudo: yes

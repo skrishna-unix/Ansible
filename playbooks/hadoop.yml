@@ -1,0 +1,6 @@
+---
+- tasks:
+    - name: Copy hosts file
+      copy: "src=files/hosts dest=/etc/hosts"
+    - name: Copy root key
+      copy: "src=files/id.rsa.pub dest=/root/.ssh/authorized_keys"
